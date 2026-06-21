@@ -92,6 +92,35 @@ export function getCurrentPeriod(kv: CollectiveAgreement) {
   );
 }
 
+/**
+ * Comparable KV pairs only — NOT the cartesian product. Two KVs are comparable
+ * when they share employeeType AND (same sector OR are explicitly related).
+ * Returns canonical, de-duplicated, order-independent pairs.
+ */
+export function getComparablePairs(): [CollectiveAgreement, CollectiveAgreement][] {
+  const all = loadAllKvs();
+  const seen = new Set<string>();
+  const pairs: [CollectiveAgreement, CollectiveAgreement][] = [];
+
+  const add = (a: CollectiveAgreement, b: CollectiveAgreement) => {
+    if (a.id === b.id) return;
+    const key = [a.slug, b.slug].sort().join("|");
+    if (seen.has(key)) return;
+    seen.add(key);
+    const [first, second] = a.slug < b.slug ? [a, b] : [b, a];
+    pairs.push([first, second]);
+  };
+
+  for (const a of all) {
+    for (const b of all) {
+      if (a.id === b.id || a.employeeType !== b.employeeType) continue;
+      const related = (a.relatedKvIds ?? []).includes(b.id) || (b.relatedKvIds ?? []).includes(a.id);
+      if (a.sector === b.sector || related) add(a, b);
+    }
+  }
+  return pairs;
+}
+
 export function getRelatedKvs(kv: CollectiveAgreement): CollectiveAgreement[] {
   const all = loadAllKvs();
   const explicit = (kv.relatedKvIds ?? [])

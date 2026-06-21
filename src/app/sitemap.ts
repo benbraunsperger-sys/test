@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
-import { getIndexableKvs, getSectors } from "@/lib/data";
+import { getIndexableKvs, getSectors, getComparablePairs } from "@/lib/data";
+import { getIndexability } from "@/lib/indexability";
 import { sectorSlug } from "@/lib/vocab";
+import { comparisonSlug } from "@/lib/slug";
 import { absoluteUrl } from "@/lib/site";
 
 /**
@@ -51,5 +53,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     }));
 
-  return [...staticPages, ...kvPages, ...sectorPages];
+  // Comparison pages: indexable only when BOTH KVs pass the gate.
+  const comparePages: MetadataRoute.Sitemap = getComparablePairs()
+    .filter(([a, b]) => getIndexability(a).indexable && getIndexability(b).indexable)
+    .map(([a, b]) => ({
+      url: absoluteUrl(`/vergleich/${comparisonSlug(a.slug, b.slug)}`),
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    }));
+
+  return [...staticPages, ...kvPages, ...sectorPages, ...comparePages];
 }

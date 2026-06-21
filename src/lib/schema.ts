@@ -35,6 +35,12 @@ export const stepSchema = z.object({
   validFrom: isoDate,
   minSalaryEUR: eur,
   basis: z.enum(SALARY_BASIS),
+  /**
+   * Optional: the seniority year (Verwendungsgruppenjahr) at which this step
+   * begins, e.g. 0 for the entry step, 2 for "nach 2 Jahren". Enables the
+   * Vorrückungs-Rechner to compute transition dates. Absent → ladder-only view.
+   */
+  afterYears: z.number().int().nonnegative().optional(),
 });
 
 export const groupSchema = z.object({

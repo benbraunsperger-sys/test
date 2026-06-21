@@ -9,6 +9,7 @@ import {
 } from "@/lib/data";
 import { getIndexability } from "@/lib/indexability";
 import { sectorSlug } from "@/lib/vocab";
+import { comparisonSlug } from "@/lib/slug";
 import { absoluteUrl, SITE } from "@/lib/site";
 import { formatDate, formatEUR, formatPercent } from "@/lib/format";
 import { Badge, StatusBadge, ConfidenceBadge } from "@/components/Badge";
@@ -278,15 +279,23 @@ export default async function KvPage({
       {related.length > 0 && (
         <section aria-labelledby="aehnliche" className="space-y-3">
           <h2 id="aehnliche" className="text-xl font-semibold">Ähnliche Kollektivverträge</h2>
-          <ul className="flex flex-wrap gap-2">
+          <ul className="space-y-2">
             {related.map((r) => (
-              <li key={r.id}>
+              <li key={r.id} className="flex flex-wrap items-center gap-3 text-sm">
                 <Link
                   href={`/kv/${r.slug}`}
-                  className="inline-block rounded-full border border-surface-border bg-surface px-3 py-1.5 text-sm hover:border-brand-500"
+                  className="inline-block rounded-full border border-surface-border bg-surface px-3 py-1.5 hover:border-brand-500"
                 >
                   {r.shortName ?? r.name}
                 </Link>
+                {r.employeeType === kv.employeeType && (
+                  <Link
+                    href={`/vergleich/${comparisonSlug(kv.slug, r.slug)}`}
+                    className="text-brand-600 hover:underline"
+                  >
+                    vergleichen →
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
