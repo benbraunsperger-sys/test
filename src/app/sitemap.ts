@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/tools/vorrueckung",
     "/tools/kv-erhoehung",
     "/ratgeber",
+    "/aktualisierungen",
     "/methodik",
     "/quellen",
     "/ueber-uns",

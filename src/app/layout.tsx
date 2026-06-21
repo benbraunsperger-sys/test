@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
+import { SiteSchema } from "@/components/SiteSchema";
+import { Analytics } from "@/components/Analytics";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -11,6 +13,15 @@ export const metadata: Metadata = {
   },
   description: SITE.tagline,
   applicationName: SITE.name,
+  // Hreflang scaffolding: de-AT now; de-DE/de-CH wired when those markets ship.
+  alternates: {
+    canonical: "/",
+    languages: { "de-AT": "/", "x-default": "/" },
+  },
+  // Google Search Console verification via env (TODO: set NEXT_PUBLIC_GSC_VERIFICATION).
+  verification: process.env.NEXT_PUBLIC_GSC_VERIFICATION
+    ? { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION }
+    : undefined,
   openGraph: {
     type: "website",
     locale: "de_AT",
@@ -40,6 +51,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <SiteFooter />
+        <SiteSchema />
+        <Analytics />
       </body>
     </html>
   );
