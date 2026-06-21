@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         // Per-page noindex is handled via <meta robots>; we only block the
         // build-report artifact and internal query-param noise here.
-        disallow: ["/build-report.json"],
+        disallow: ["/build-report.json", "/vorschau/"],
       },
     ],
     sitemap: absoluteUrl("/sitemap.xml"),

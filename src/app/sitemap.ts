@@ -64,6 +64,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     }));
 
+  // Verwendungsgruppe sub-pages: only for publicly indexable KVs, non-thin groups.
+  const groupPages: MetadataRoute.Sitemap = getIndexableKvs().flatMap((kv) =>
+    kv.groups
+      .filter((g) => g.criteriaSummary.length > 0 && g.steps.length >= 2)
+      .map((g) => ({
+        url: absoluteUrl(`/kv/${kv.slug}/verwendungsgruppe/${encodeURIComponent(g.code)}`),
+        lastModified: new Date(kv.lastChecked),
+        changeFrequency: "monthly" as const,
+        priority: 0.6,
+      })),
+  );
+
   const ratgeberPages: MetadataRoute.Sitemap = RATGEBER.map((a) => ({
     url: absoluteUrl(`/ratgeber/${a.slug}`),
     lastModified: new Date(a.updated),
@@ -71,5 +83,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.4,
   }));
 
-  return [...staticPages, ...kvPages, ...sectorPages, ...comparePages, ...ratgeberPages];
+  return [...staticPages, ...kvPages, ...sectorPages, ...groupPages, ...comparePages, ...ratgeberPages];
 }
