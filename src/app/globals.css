@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-surface-subtle text-ink antialiased;
+}
+
+/* Dense, scannable salary tables. */
+.kv-table {
+  @apply w-full border-collapse text-sm;
+}
+.kv-table th,
+.kv-table td {
+  @apply border border-surface-border px-3 py-2 text-left;
+}
+.kv-table thead th {
+  @apply bg-surface-subtle font-semibold text-ink-soft;
+}
+.kv-table tbody tr:nth-child(even) {
+  @apply bg-surface-subtle/60;
+}
+.kv-table td.num {
+  @apply text-right font-mono tabular-nums;
+}
+
+/* Focus-visible accessibility default. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  @apply outline outline-2 outline-offset-2 outline-brand-500;
+}

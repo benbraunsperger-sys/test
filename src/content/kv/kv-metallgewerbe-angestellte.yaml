@@ -1,0 +1,81 @@
+id: kv-metallgewerbe-angestellte
+slug: metallgewerbe-angestellte
+name: Kollektivvertrag für Angestellte im Metallgewerbe
+shortName: Metallgewerbe Angestellte
+sector: Metallgewerbe
+employeeType: Angestellte
+country: AT
+region: Österreich
+parties:
+  employer:
+    - Bundesinnung der Metalltechnik (WKO)
+  unions:
+    - GPA (Gewerkschaft der Privatangestellten)
+validityPeriods:
+  - id: vp-2026
+    validFrom: "2026-01-01"
+    validTo: "2026-12-31"
+    status: gültig
+    increaseKVPercent: 2.2
+    capEUR: 95
+    sourceUrl: https://www.wko.at/kollektivvertrag/gehaltsordnung-metallgewerbe-angestellte-2026-27
+    notes: >-
+      Erhöhung der KV-Mindestgehälter um 2,2 %, Deckelung von 95,00 EUR für die
+      Verwendungsgruppen V, VI und Meister. Zweijahresabschluss 2026/2027.
+  - id: vp-2027
+    validFrom: "2027-01-01"
+    status: angekündigt
+    sourceUrl: https://www.wko.at/kollektivvertrag/gehaltsordnung-metallgewerbe-angestellte-2026-27
+    notes: >-
+      Zweite Stufe des Abschlusses 2026/2027, wirksam ab 1.1.2027. Werte im
+      offiziellen KV prüfen.
+# HINWEIS: Die folgende Tabelle ist NOCH NICHT verifiziert. Die Struktur
+# (Gruppen/Stufen) bildet den Metallgewerbe-KV ab; die EUR-Beträge müssen aus
+# der offiziellen Gehaltsordnung (WKO/GPA-PDF) abgeschrieben werden, bevor
+# confidence auf "verified" gesetzt und die Seite indexierbar wird.
+groups:
+  - code: "I"
+    name: Verwendungsgruppe I
+    criteriaSummary: >-
+      Einfache, schematische Tätigkeiten nach genauer Anweisung, ohne
+      Vorkenntnisse ausführbar. (Eigene Zusammenfassung der Tätigkeitsmerkmale.)
+    steps:
+      - stepLabel: Im 1. u. 2. Verwendungsgruppenjahr
+        validFrom: "2026-01-01"
+        minSalaryEUR: 0
+        basis: Monat
+  - code: "III"
+    name: Verwendungsgruppe III
+    criteriaSummary: >-
+      Tätigkeiten, die fachliche Kenntnisse und eine abgeschlossene einschlägige
+      Ausbildung oder gleichwertige Erfahrung voraussetzen, selbstständig nach
+      allgemeinen Anweisungen ausgeführt. (Eigene Zusammenfassung.)
+    steps:
+      - stepLabel: Im 1. u. 2. Verwendungsgruppenjahr
+        validFrom: "2026-01-01"
+        minSalaryEUR: 0
+        basis: Monat
+      - stepLabel: Im 3. u. 4. Verwendungsgruppenjahr
+        validFrom: "2026-01-01"
+        minSalaryEUR: 0
+        basis: Monat
+classificationNotes: >-
+  Die Einstufung richtet sich nach der tatsächlich ausgeübten Tätigkeit, nicht
+  nach der Berufsbezeichnung. Innerhalb einer Verwendungsgruppe steigt das
+  Mindestgehalt mit den Verwendungsgruppenjahren (Vorrückung). Maßgeblich sind
+  die Tätigkeitsmerkmale des offiziellen Kollektivvertrags.
+sourceUrls:
+  - https://www.wko.at/kollektivvertrag/gehaltsordnung-metallgewerbe-angestellte-2026-27
+  - https://www.gpa.at/kollektivvertrag/gewerbe-und-handwerk/metallgewerbe/kv-metallgewerbe-2026-2027
+lastChecked: "2026-06-21"
+confidence: needs-review
+manualReview: false
+active: true
+relatedKvIds:
+  - kv-gewerbe-handwerk-dienstleistung-angestellte
+seo:
+  title: KV Metallgewerbe Angestellte 2026 – Gehaltstabelle & Einstufung
+  metaDescription: >-
+    Mindestgehälter, Verwendungsgruppen und Einstufung im Kollektivvertrag für
+    Angestellte im Metallgewerbe 2026. Mit Quellenangabe und Stand-Datum.
+  h1: Kollektivvertrag für Angestellte im Metallgewerbe

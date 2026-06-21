@@ -1,0 +1,68 @@
+id: kv-information-consulting-angestellte
+slug: information-consulting-angestellte
+name: Kollektivvertrag für Angestellte in Information und Consulting
+shortName: Information und Consulting
+sector: Information und Consulting
+employeeType: Angestellte
+country: AT
+region: Österreich
+parties:
+  employer:
+    - Fachverband Unternehmensberatung, Buchhaltung und IT (UBIT, WKO)
+  unions:
+    - GPA (Gewerkschaft der Privatangestellten)
+validityPeriods:
+  - id: vp-2026
+    validFrom: "2026-01-01"
+    validTo: "2026-12-31"
+    status: gültig
+    increaseKVPercent: 2.85
+    sourceUrl: https://www.wko.at/kollektivvertrag/gehaltsordnung-information-consulting-angestellte-2026
+    notes: >-
+      Mindestgehälter +2,85 %, Lehrlingseinkommen +3,5 % ab 1.1.2026. § 10
+      (Reisekosten) neu gefasst; Diäten auf gesetzliche Sätze angehoben.
+# HINWEIS: Verwendungsgruppen-Tabelle noch nicht verifiziert. Beträge müssen aus
+# der offiziellen Gehaltsordnung (WKO/GPA-PDF) abgeschrieben werden.
+groups:
+  - code: "ST1"
+    name: Verwendungsgruppe ST1
+    criteriaSummary: >-
+      Tätigkeiten mit grundlegenden fachlichen Kenntnissen, die nach Einarbeitung
+      weitgehend selbstständig erbracht werden. (Eigene Zusammenfassung.)
+    steps:
+      - stepLabel: Im 1. u. 2. Verwendungsgruppenjahr
+        validFrom: "2026-01-01"
+        minSalaryEUR: 0
+        basis: Monat
+  - code: "ST2"
+    name: Verwendungsgruppe ST2
+    criteriaSummary: >-
+      Anspruchsvolle Fachtätigkeiten mit fundierter Ausbildung oder Erfahrung,
+      eigenverantwortlich im jeweiligen Fachbereich. (Eigene Zusammenfassung.)
+    steps:
+      - stepLabel: Im 1. u. 2. Verwendungsgruppenjahr
+        validFrom: "2026-01-01"
+        minSalaryEUR: 0
+        basis: Monat
+      - stepLabel: Im 3. u. 4. Verwendungsgruppenjahr
+        validFrom: "2026-01-01"
+        minSalaryEUR: 0
+        basis: Monat
+classificationNotes: >-
+  Der IC-KV ordnet Tätigkeiten Verwendungsgruppen zu; innerhalb der Gruppe
+  steigt das Mindestgehalt mit den Verwendungsgruppenjahren. Der eigenständige
+  IT-Kollektivvertrag (IT-KV) regelt IT-Dienstleistung gesondert. Maßgeblich ist
+  die jeweilige offizielle Gehaltsordnung.
+sourceUrls:
+  - https://www.wko.at/kollektivvertrag/gehaltsordnung-information-consulting-angestellte-2026
+  - https://www.wko.at/kollektivvertrag/kollektivvertrag-information-und-consulting-2026
+lastChecked: "2026-06-21"
+confidence: needs-review
+manualReview: false
+active: true
+seo:
+  title: KV Information & Consulting 2026 – Gehaltsordnung & Verwendungsgruppen
+  metaDescription: >-
+    Mindestgehälter, Verwendungsgruppen und Einstufung im Kollektivvertrag
+    Information und Consulting (UBIT) 2026. Mit offizieller Quelle und Stand-Datum.
+  h1: Kollektivvertrag für Angestellte in Information und Consulting

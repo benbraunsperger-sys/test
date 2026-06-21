@@ -1,0 +1,84 @@
+id: kv-handel-angestellte
+slug: handel-angestellte
+name: Kollektivvertrag für Angestellte im Handel
+shortName: Handel Angestellte
+sector: Handel
+employeeType: Angestellte
+country: AT
+region: Österreich
+parties:
+  employer:
+    - Bundessparte Handel (WKO)
+  unions:
+    - GPA (Gewerkschaft der Privatangestellten)
+validityPeriods:
+  - id: vp-2026
+    validFrom: "2026-01-01"
+    validTo: "2026-12-31"
+    status: gültig
+    increaseKVPercent: 2.55
+    sourceUrl: https://www.wko.at/kollektivvertrag/gehaltstafeln-angestellte-handel-2026
+    notes: >-
+      Erhöhung der Gehaltstafel um 2,55 % ab 1.1.2026; die sich ergebenden
+      KV-Mindestgehälter werden auf den nächsten vollen Euro aufgerundet.
+# HINWEIS: Die Beschäftigungsgruppen-Tabelle (A–H) ist noch nicht verifiziert.
+# Die Lehrlingseinkommen unten stammen aus der öffentlichen Abschluss-Information
+# und sind verifiziert; die Gruppenbeträge müssen noch aus der offiziellen
+# Gehaltstafel abgeschrieben werden.
+groups:
+  - code: "A"
+    name: Beschäftigungsgruppe A
+    criteriaSummary: >-
+      Einfache Tätigkeiten, die nach kurzer Einschulung ohne besondere
+      Vorkenntnisse ausgeführt werden. (Eigene Zusammenfassung.)
+    steps:
+      - stepLabel: 1. u. 2. Berufsjahr
+        validFrom: "2026-01-01"
+        minSalaryEUR: 0
+        basis: Monat
+  - code: "C"
+    name: Beschäftigungsgruppe C
+    criteriaSummary: >-
+      Qualifizierte Tätigkeiten im Verkauf oder in der Verwaltung, die
+      einschlägige Kenntnisse und selbstständige Arbeit erfordern. (Eigene
+      Zusammenfassung.)
+    steps:
+      - stepLabel: 1. u. 2. Berufsjahr
+        validFrom: "2026-01-01"
+        minSalaryEUR: 0
+        basis: Monat
+      - stepLabel: 3. u. 4. Berufsjahr
+        validFrom: "2026-01-01"
+        minSalaryEUR: 0
+        basis: Monat
+apprenticePay:
+  - year: 1
+    validFrom: "2026-01-01"
+    amountEUR: 1026
+  - year: 2
+    validFrom: "2026-01-01"
+    amountEUR: 1200
+  - year: 3
+    validFrom: "2026-01-01"
+    amountEUR: 1518
+  - year: 4
+    validFrom: "2026-01-01"
+    amountEUR: 1580
+classificationNotes: >-
+  Der Handels-KV unterscheidet acht Beschäftigungsgruppen (A bis H). Die
+  Einstufung richtet sich nach der tatsächlich ausgeübten Tätigkeit, nicht nach
+  dem Jobtitel. Innerhalb einer Gruppe steigt das Mindestgehalt mit den
+  Berufsjahren. Maßgeblich ist die offizielle Gehaltstafel.
+sourceUrls:
+  - https://www.wko.at/kollektivvertrag/gehaltstafeln-angestellte-handel-2026
+  - https://www.gpa.at/kollektivvertrag/handel/handelsangestellte
+lastChecked: "2026-06-21"
+confidence: needs-review
+manualReview: false
+active: true
+seo:
+  title: KV Handel Angestellte 2026 – Gehaltstafel & Beschäftigungsgruppen
+  metaDescription: >-
+    Mindestgehälter, Beschäftigungsgruppen A–H, Einstufung und Lehrlingseinkommen
+    im Kollektivvertrag für Angestellte im Handel 2026. Mit Quelle und Stand.
+  h1: Kollektivvertrag für Angestellte im Handel
