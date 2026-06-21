@@ -1,0 +1,22 @@
+id: beruf-kfz-techniker
+slug: kfz-techniker
+name: Kfz-Techniker / Kfz-Technikerin (Angestellte)
+synonyms:
+  - KFZ-Techniker
+  - Kfz-Mechaniker
+  - Automechaniker
+primaryKvId: kv-metallgewerbe-angestellte
+sector: Metallgewerbe
+typicalGroups:
+  - kvId: kv-metallgewerbe-angestellte
+    groupCode: "III"
+    rationale: >-
+      Kfz-technische Fachtätigkeit mit Lehrabschluss; im Angestelltenschema des
+      Metallgewerbes (Fahrzeugtechnik) typischerweise Verwendungsgruppe III.
+      (Eigene Einordnung; gewerbliche Kfz-Techniker unter dem Arbeiter-KV.)
+searchTermsDE:
+  - Kfz-Techniker Gehalt Österreich
+  - Automechaniker Lohn KV
+confidence: needs-review
+sourceUrls:
+  - https://www.wko.at/kollektivvertrag/gehaltsordnung-metallgewerbe-angestellte-2026-27

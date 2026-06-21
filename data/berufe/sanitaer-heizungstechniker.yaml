@@ -1,0 +1,22 @@
+id: beruf-sanitaer-heizungstechniker
+slug: sanitaer-heizungstechniker
+name: Sanitär- und Heizungstechniker (Angestellte)
+synonyms:
+  - Installateur
+  - Gas-Wasser-Heizung
+  - Heizungstechniker
+primaryKvId: kv-metallgewerbe-angestellte
+sector: Metallgewerbe
+typicalGroups:
+  - kvId: kv-metallgewerbe-angestellte
+    groupCode: "III"
+    rationale: >-
+      Sanitär-/Heizungstechnische Fachtätigkeit mit Lehrabschluss; im
+      Angestelltenschema des Metallgewerbes typischerweise Verwendungsgruppe III.
+      (Eigene Einordnung.)
+searchTermsDE:
+  - Installateur Gehalt Österreich
+  - Heizungstechniker Lohn KV
+confidence: needs-review
+sourceUrls:
+  - https://www.wko.at/kollektivvertrag/gehaltsordnung-metallgewerbe-angestellte-2026-27

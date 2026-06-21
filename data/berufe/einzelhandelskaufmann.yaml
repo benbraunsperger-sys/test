@@ -1,0 +1,25 @@
+id: beruf-einzelhandelskaufmann
+slug: einzelhandelskaufmann
+name: Einzelhandelskaufmann / Einzelhandelskauffrau
+synonyms:
+  - Einzelhandelskauffrau
+  - Einzelhandelskaufmann
+  - Kaufmann im Einzelhandel
+primaryKvId: kv-handel-angestellte
+sector: Handel
+typicalGroups:
+  - kvId: kv-handel-angestellte
+    groupCode: "C"
+    rationale: >-
+      Qualifizierte Verkaufs- und Beratungstätigkeit mit abgeschlossener
+      einschlägiger Ausbildung wird im Handels-KV typischerweise in der
+      Beschäftigungsgruppe C eingestuft. (Eigene Einordnung, im KV prüfen.)
+searchTermsDE:
+  - Einzelhandelskaufmann Gehalt
+  - Einzelhandelskauffrau Gehalt Österreich
+  - Verkäufer Gehalt KV Handel
+notes: >-
+  Die konkrete Gruppe hängt von Tätigkeit, Verantwortung und Berufsjahren ab.
+confidence: verified
+sourceUrls:
+  - https://www.wko.at/kollektivvertrag/gehaltstafeln-angestellte-handel-2026

@@ -1,0 +1,20 @@
+id: beruf-metalltechniker
+slug: metalltechniker
+name: Metalltechniker / Metalltechnikerin (Angestellte)
+synonyms:
+  - Metalltechnikerin
+  - Metalltechnik
+primaryKvId: kv-metallgewerbe-angestellte
+sector: Metallgewerbe
+typicalGroups:
+  - kvId: kv-metallgewerbe-angestellte
+    groupCode: "III"
+    rationale: >-
+      Selbstständige metalltechnische Fachtätigkeit mit Lehrabschluss, im
+      Angestelltenschema typischerweise Verwendungsgruppe III. (Eigene Einordnung.)
+searchTermsDE:
+  - Metalltechniker Gehalt
+  - Metalltechniker Lohn Österreich
+confidence: verified
+sourceUrls:
+  - https://www.wko.at/kollektivvertrag/gehaltsordnung-metallgewerbe-angestellte-2026-27

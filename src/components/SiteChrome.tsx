@@ -3,6 +3,7 @@ import { SITE } from "@/lib/site";
 
 const NAV = [
   { href: "/kollektivvertraege", label: "Kollektivverträge" },
+  { href: "/berufe", label: "Berufe" },
   { href: "/branchen", label: "Branchen" },
   { href: "/tools/kv-mindest-check", label: "Tools" },
   { href: "/ratgeber", label: "Ratgeber" },

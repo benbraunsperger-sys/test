@@ -1,0 +1,26 @@
+id: beruf-elektrotechniker
+slug: elektrotechniker
+name: Elektrotechniker / Elektrotechnikerin (Metallgewerbe)
+synonyms:
+  - Elektrotechnikerin
+  - Elektriker
+  - Elektroinstallateur
+primaryKvId: kv-metallgewerbe-angestellte
+sector: Metallgewerbe
+typicalGroups:
+  - kvId: kv-metallgewerbe-angestellte
+    groupCode: "III"
+    rationale: >-
+      Elektrotechnische Fachtätigkeit mit einschlägiger Ausbildung; im
+      Metallgewerbe-Angestelltenschema typischerweise Verwendungsgruppe III.
+      (Eigene Einordnung; je nach Betrieb kann ein anderer KV gelten.)
+searchTermsDE:
+  - Elektrotechniker Gehalt Österreich
+  - Elektriker Lohn KV
+  - Elektroinstallateur Gehalt
+notes: >-
+  Achtung: Elektroinstallateure können je nach Betrieb auch unter den
+  Elektro-/Elektronikindustrie- oder Gewerbe-KV fallen.
+confidence: needs-review
+sourceUrls:
+  - https://www.wko.at/kollektivvertrag/gehaltsordnung-metallgewerbe-angestellte-2026-27

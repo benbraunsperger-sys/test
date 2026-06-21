@@ -1,0 +1,20 @@
+id: beruf-grosshandelskaufmann
+slug: grosshandelskaufmann
+name: Großhandelskaufmann / Großhandelskauffrau
+synonyms:
+  - Großhandelskauffrau
+  - Kaufmann im Großhandel
+primaryKvId: kv-handel-angestellte
+sector: Handel
+typicalGroups:
+  - kvId: kv-handel-angestellte
+    groupCode: "C"
+    rationale: >-
+      Qualifizierte kaufmännische Tätigkeit im Großhandel mit einschlägiger
+      Ausbildung, typischerweise Beschäftigungsgruppe C. (Eigene Einordnung.)
+searchTermsDE:
+  - Großhandelskaufmann Gehalt
+  - Großhandelskauffrau Gehalt Österreich
+confidence: verified
+sourceUrls:
+  - https://www.wko.at/kollektivvertrag/gehaltstafeln-angestellte-handel-2026

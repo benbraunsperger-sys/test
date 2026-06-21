@@ -1,0 +1,20 @@
+id: beruf-kassier-handel
+slug: kassier-handel
+name: Kassier / Kassiererin (Handel)
+synonyms:
+  - Kassiererin
+  - Kassakraft
+primaryKvId: kv-handel-angestellte
+sector: Handel
+typicalGroups:
+  - kvId: kv-handel-angestellte
+    groupCode: "A"
+    rationale: >-
+      Kassiertätigkeit nach Einschulung wird im Handels-KV in einer der unteren
+      Beschäftigungsgruppen eingestuft. (Eigene Einordnung.)
+searchTermsDE:
+  - Kassier Gehalt Handel
+  - Kassiererin Gehalt Österreich
+confidence: needs-review
+sourceUrls:
+  - https://www.wko.at/kollektivvertrag/gehaltstafeln-angestellte-handel-2026

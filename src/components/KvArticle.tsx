@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { CollectiveAgreement } from "@/lib/schema";
 import { getCurrentPeriod, getRelatedKvs } from "@/lib/data";
+import { berufeForKv } from "@/lib/berufe";
 import { getIndexability } from "@/lib/indexability";
 import { sectorSlug } from "@/lib/vocab";
 import { comparisonSlug } from "@/lib/slug";
@@ -26,6 +27,7 @@ export function KvArticle({ kv, preview = false }: { kv: CollectiveAgreement; pr
   const unverified = kv.confidence === "needs-review";
   const history = [...kv.validityPeriods].sort((a, b) => b.validFrom.localeCompare(a.validFrom));
   const faqs = buildKvFaqs(kv);
+  const berufe = berufeForKv(kv.id);
 
   const datasetLd = {
     "@context": "https://schema.org",
@@ -232,6 +234,21 @@ export function KvArticle({ kv, preview = false }: { kv: CollectiveAgreement; pr
                     vergleichen →
                   </Link>
                 )}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {berufe.length > 0 && (
+        <section aria-labelledby="berufe" className="space-y-3">
+          <h2 id="berufe" className="text-xl font-semibold">Berufe in diesem Kollektivvertrag</h2>
+          <ul className="flex flex-wrap gap-2">
+            {berufe.map((b) => (
+              <li key={b.id}>
+                <Link href={`/beruf/${b.slug}`} className="inline-block rounded-full border border-surface-border bg-surface px-3 py-1.5 text-sm hover:border-brand-500">
+                  {b.name}
+                </Link>
               </li>
             ))}
           </ul>

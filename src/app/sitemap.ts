@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getIndexableKvs, getSectors, getComparablePairs } from "@/lib/data";
+import { getIndexableBerufe } from "@/lib/berufe";
 import { getIndexability } from "@/lib/indexability";
 import { sectorSlug } from "@/lib/vocab";
 import { comparisonSlug } from "@/lib/slug";
@@ -18,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     "/",
     "/kollektivvertraege",
+    "/berufe",
     "/branchen",
     "/tools/einstufung",
     "/tools/kv-mindest-check",
@@ -83,5 +85,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.4,
   }));
 
-  return [...staticPages, ...kvPages, ...sectorPages, ...groupPages, ...comparePages, ...ratgeberPages];
+  // Beruf pages: indexable only when the beruf is verified AND its KV is public.
+  const berufPages: MetadataRoute.Sitemap = getIndexableBerufe().map((b) => ({
+    url: absoluteUrl(`/beruf/${b.slug}`),
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  return [
+    ...staticPages,
+    ...kvPages,
+    ...sectorPages,
+    ...groupPages,
+    ...berufPages,
+    ...comparePages,
+    ...ratgeberPages,
+  ];
 }

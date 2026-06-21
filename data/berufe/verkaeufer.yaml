@@ -1,0 +1,27 @@
+id: beruf-verkaeufer
+slug: verkaeufer
+name: Verkäufer / Verkäuferin
+synonyms:
+  - Verkäuferin
+  - Verkaufsmitarbeiter
+  - Verkaufskraft
+primaryKvId: kv-handel-angestellte
+sector: Handel
+typicalGroups:
+  - kvId: kv-handel-angestellte
+    groupCode: "A"
+    rationale: >-
+      Einfache Verkaufstätigkeit nach kurzer Einschulung wird im Handels-KV
+      typischerweise in der untersten Beschäftigungsgruppe eingestuft. (Eigene
+      Einordnung; mit Qualifikation/Verantwortung höhere Gruppe möglich.)
+  - kvId: kv-handel-angestellte
+    groupCode: "C"
+    rationale: >-
+      Mit abgeschlossener Ausbildung und qualifizierter Beratung ist eine höhere
+      Einstufung (z. B. Gruppe C) möglich.
+searchTermsDE:
+  - Verkäufer Gehalt Österreich
+  - Verkäuferin Gehalt KV Handel
+confidence: verified
+sourceUrls:
+  - https://www.wko.at/kollektivvertrag/gehaltstafeln-angestellte-handel-2026

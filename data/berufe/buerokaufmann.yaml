@@ -1,0 +1,24 @@
+id: beruf-buerokaufmann
+slug: buerokaufmann
+name: Bürokaufmann / Bürokauffrau (Handel)
+synonyms:
+  - Bürokauffrau
+  - Bürokaufmann
+  - kaufmännischer Angestellter
+primaryKvId: kv-handel-angestellte
+sector: Handel
+typicalGroups:
+  - kvId: kv-handel-angestellte
+    groupCode: "C"
+    rationale: >-
+      Selbstständige kaufmännische Sachbearbeitung in Handelsbetrieben wird im
+      Handels-KV häufig in Gruppe C eingestuft. (Eigene Einordnung; in anderen
+      Branchen gilt ein anderer KV.)
+searchTermsDE:
+  - Bürokaufmann Gehalt
+  - Bürokauffrau Gehalt Österreich KV
+notes: >-
+  Achtung: Bürokräfte außerhalb des Handels fallen unter andere Kollektivverträge.
+confidence: needs-review
+sourceUrls:
+  - https://www.wko.at/kollektivvertrag/gehaltstafeln-angestellte-handel-2026

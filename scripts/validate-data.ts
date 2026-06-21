@@ -2,13 +2,19 @@
  * Build-time data validator. Exits non-zero (FAILS the build) on any invalid
  * record or table-integrity problem. Idempotent and re-runnable.
  */
-import { loadAndValidate, checkTableIntegrity } from "./lib";
+import { loadAndValidate, loadBerufe, checkTableIntegrity } from "./lib";
 
 function main() {
   const { records, errors } = loadAndValidate();
 
   let failed = errors.length > 0;
   for (const e of errors) {
+    console.error(`\n❌ ${e.file}:\n${e.message}`);
+  }
+
+  const { berufe, errors: berufErrors } = loadBerufe(records);
+  if (berufErrors.length > 0) failed = true;
+  for (const e of berufErrors) {
     console.error(`\n❌ ${e.file}:\n${e.message}`);
   }
 
@@ -27,6 +33,7 @@ function main() {
   }
 
   console.log(`✓ ${records.length} KV-Datensätze valide.`);
+  console.log(`✓ ${berufe.length} Beruf-Datensätze valide.`);
 }
 
 main();
