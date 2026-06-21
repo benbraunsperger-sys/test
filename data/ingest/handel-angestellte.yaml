@@ -1,0 +1,47 @@
+# ┌─────────────────────────────────────────────────────────────────────────┐
+# │ PASTE THE GEMINI EXPORT FOR "Handel Angestellte 2026" BELOW, then run:    │
+# │    npm run data:ingest                                                    │
+# │ It maps to the strict schema and writes src/content/kv/kv-handel-          │
+# │ angestellte.yaml as confidence: verified-pending-human (previews on        │
+# │ /vorschau, not public until `npm run verify:promote -- kv-handel-          │
+# │ angestellte`). Numbers are transcribed verbatim — never edited.            │
+# └─────────────────────────────────────────────────────────────────────────┘
+#
+# Expected shape (close to the Gemini export; fields the ingester fills if absent
+# are marked OPTIONAL):
+#
+# id: kv-handel-angestellte
+# slug: handel-angestellte                 # OPTIONAL (derived from id)
+# name: Kollektivvertrag für Angestellte im Handel
+# shortName: Handel Angestellte            # OPTIONAL
+# sector: Handel
+# employeeType: Angestellte
+# parties:                                 # OPTIONAL
+#   employer: [Bundessparte Handel (WKO)]
+#   unions: [GPA]
+# validityPeriods:
+#   - id: vp-2026
+#     validFrom: "2026-01-01"
+#     validTo: "2026-12-31"
+#     status: gültig
+#     increaseKVPercent: 2.55
+#     sourceUrl: https://www.wko.at/kollektivvertrag/gehaltstafeln-angestellte-handel-2026
+# groups:
+#   - code: "A"
+#     name: Beschäftigungsgruppe A
+#     criteriaSummary: "<own words>"       # OPTIONAL (neutral default filled)
+#     steps:                               # A/B have 3 steps, C–H have 5 — ragged is fine
+#       - stepLabel: "1.-2. Berufsjahr"
+#         validFrom: "2026-01-01"
+#         minSalaryEUR: 0000.00            # ← real number from the PDF
+#         basis: Monat                     # OPTIONAL (default Monat)
+#         sourceUrl: https://...           # OPTIONAL per-cell source
+# apprenticePay:
+#   - { year: 1, validFrom: "2026-01-01", amountEUR: 1026 }
+# sourceUrls: [https://www.wko.at/kollektivvertrag/gehaltstafeln-angestellte-handel-2026]
+# lastChecked: "2026-06-21"
+# confidence: needs-review                 # ingester promotes to verified-pending-human
+# verifyChecklist:
+#   - { label: "Gruppe C, 1.-2. Jahr", groupCode: "C", stepLabel: "1.-2. Berufsjahr", expectedAmountEUR: 0000, sourceUrl: https://... }
+
+__PASTE_GEMINI_YAML_HERE__: true

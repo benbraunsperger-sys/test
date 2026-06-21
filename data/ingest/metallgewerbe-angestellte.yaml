@@ -1,0 +1,29 @@
+# ┌─────────────────────────────────────────────────────────────────────────┐
+# │ PASTE THE GEMINI EXPORT FOR "Metallgewerbe Angestellte 2026 + 2027".      │
+# │ Model BOTH years as TWO validityPeriods in ONE record. Each step carries  │
+# │ validFrom (2026-01-01 or 2027-01-01) and optionally periodId so the two    │
+# │ tables stay separate (do NOT merge them).                                 │
+# │ Then run:  npm run data:ingest                                            │
+# └─────────────────────────────────────────────────────────────────────────┘
+#
+# id: kv-metallgewerbe-angestellte
+# name: Kollektivvertrag für Angestellte im Metallgewerbe
+# sector: Metallgewerbe
+# employeeType: Angestellte
+# validityPeriods:
+#   - { id: vp-2026, validFrom: "2026-01-01", validTo: "2026-12-31", status: gültig,
+#       increaseKVPercent: 2.2, capEUR: 95, sourceUrl: https://www.wko.at/kollektivvertrag/gehaltsordnung-metallgewerbe-angestellte-2026-27 }
+#   - { id: vp-2027, validFrom: "2027-01-01", status: angekündigt,
+#       increaseKVPercent: 2.0, sourceUrl: https://www.wko.at/kollektivvertrag/gehaltsordnung-metallgewerbe-angestellte-2026-27 }
+# groups:
+#   - code: "VI"                            # VI has steps at 1.u.2 / nach 2 / nach 5 only — ragged is correct
+#     name: Verwendungsgruppe VI
+#     steps:
+#       - { stepLabel: "Im 1. u. 2. Verwendungsgruppenjahr", validFrom: "2026-01-01", minSalaryEUR: 0000.00, periodId: vp-2026 }
+#       - { stepLabel: "Im 1. u. 2. Verwendungsgruppenjahr", validFrom: "2027-01-01", minSalaryEUR: 0000.00, periodId: vp-2027 }
+#   # ... Meistergruppe / Obermeister may have irregular intervals — that is fine.
+# sourceUrls: [https://www.wko.at/kollektivvertrag/gehaltsordnung-metallgewerbe-angestellte-2026-27]
+# lastChecked: "2026-06-21"
+# confidence: needs-review
+
+__PASTE_GEMINI_YAML_HERE__: true

@@ -29,7 +29,12 @@ export type Country = (typeof COUNTRIES)[number];
 export const VALIDITY_STATUS = ["gültig", "angekündigt", "ausgelaufen"] as const;
 export type ValidityStatus = (typeof VALIDITY_STATUS)[number];
 
-export const CONFIDENCE = ["verified", "likely", "needs-review"] as const;
+export const CONFIDENCE = [
+  "verified",
+  "verified-pending-human",
+  "likely",
+  "needs-review",
+] as const;
 export type Confidence = (typeof CONFIDENCE)[number];
 
 export const SALARY_BASIS = ["Monat", "Stunde"] as const;

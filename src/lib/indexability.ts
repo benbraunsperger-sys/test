@@ -70,9 +70,11 @@ export function getIndexability(kv: CollectiveAgreement): IndexabilityResult {
   // (6) >= 3 internal links.
   if (guaranteedInternalLinks(kv) < 3) reasons.push("Weniger als 3 interne Links");
 
-  // (7) confidence != needs-review OR manualReview passed.
-  if (kv.confidence === "needs-review" && !kv.manualReview) {
-    reasons.push("confidence=needs-review und manualReview nicht bestanden");
+  // (7) PUBLIC index requires a fully human-verified record. "verified-pending-
+  // human" passes every structural check but stays on the noindex staging path
+  // until a human ticks the REVIEW-QUEUE and runs verify:promote.
+  if (kv.confidence !== "verified") {
+    reasons.push(`confidence=${kv.confidence} (öffentlich indexierbar erst bei "verified")`);
   }
 
   // (8) no prohibited advice wording.
@@ -84,4 +86,17 @@ export function getIndexability(kv: CollectiveAgreement): IndexabilityResult {
 /** Convenience boolean for templates. */
 export function isIndexable(kv: CollectiveAgreement): boolean {
   return getIndexability(kv).indexable;
+}
+
+/**
+ * Staging preview: a record renders fully on the noindex /vorschau path when it
+ * passes ALL structural checks and is at least "verified-pending-human" (i.e.
+ * the only thing missing is the human tick). Public-verified records preview too.
+ */
+export function isStagingPreviewable(kv: CollectiveAgreement): boolean {
+  if (kv.confidence !== "verified" && kv.confidence !== "verified-pending-human") return false;
+  // Reuse all the structural checks by clearing only the confidence reason.
+  const { reasons } = getIndexability(kv);
+  const structural = reasons.filter((r) => !r.startsWith("confidence="));
+  return structural.length === 0;
 }

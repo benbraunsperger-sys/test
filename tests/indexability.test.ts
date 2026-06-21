@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { getIndexability } from "@/lib/indexability";
+import { getIndexability, isStagingPreviewable } from "@/lib/indexability";
 import { verifiedKv } from "./fixtures";
 
 describe("getIndexability quality gate", () => {
@@ -7,15 +7,25 @@ describe("getIndexability quality gate", () => {
     expect(getIndexability(verifiedKv()).indexable).toBe(true);
   });
 
-  it("blocks needs-review records without manualReview", () => {
-    const r = getIndexability(verifiedKv({ confidence: "needs-review", manualReview: false }));
+  it("blocks needs-review records from the public index", () => {
+    const r = getIndexability(verifiedKv({ confidence: "needs-review" }));
     expect(r.indexable).toBe(false);
-    expect(r.reasons.join(" ")).toMatch(/needs-review/);
+    expect(r.reasons.join(" ")).toMatch(/confidence=needs-review/);
   });
 
-  it("allows needs-review once manualReview passed", () => {
-    const r = getIndexability(verifiedKv({ confidence: "needs-review", manualReview: true }));
-    expect(r.indexable).toBe(true);
+  it("keeps verified-pending-human OUT of the public index", () => {
+    const r = getIndexability(verifiedKv({ confidence: "verified-pending-human" }));
+    expect(r.indexable).toBe(false);
+  });
+
+  it("previews verified-pending-human on staging but not needs-review", () => {
+    expect(isStagingPreviewable(verifiedKv({ confidence: "verified-pending-human" }))).toBe(true);
+    expect(isStagingPreviewable(verifiedKv({ confidence: "verified" }))).toBe(true);
+    expect(isStagingPreviewable(verifiedKv({ confidence: "needs-review" }))).toBe(false);
+  });
+
+  it("does not stage a pending record that fails a structural check", () => {
+    expect(isStagingPreviewable(verifiedKv({ confidence: "verified-pending-human", groups: [] }))).toBe(false);
   });
 
   it("blocks stale records (lastChecked > 365 days)", () => {

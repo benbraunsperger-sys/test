@@ -41,6 +41,23 @@ export const stepSchema = z.object({
    * Vorrückungs-Rechner to compute transition dates. Absent → ladder-only view.
    */
   afterYears: z.number().int().nonnegative().optional(),
+  /** Optional per-cell official source (Gemini export carries these). */
+  sourceUrl: url.optional(),
+  /** Which validityPeriod.id this step belongs to (for multi-period tables). */
+  periodId: z.string().optional(),
+});
+
+/**
+ * A single human spot-check item carried with the record so the verification
+ * queue survives in the data (extended from the Gemini export's verifyChecklist).
+ */
+export const verifyItemSchema = z.object({
+  label: z.string().min(1),
+  groupCode: z.string().optional(),
+  stepLabel: z.string().optional(),
+  expectedAmountEUR: eur.optional(),
+  sourceUrl: url.optional(),
+  checked: z.boolean().default(false),
 });
 
 export const groupSchema = z.object({
@@ -111,6 +128,16 @@ export const collectiveAgreementSchema = z
     manualReview: z.boolean().default(false),
     active: z.boolean().default(true),
     relatedKvIds: z.array(z.string()).optional(),
+    /** Human spot-check items (survives from the Gemini ingest). */
+    verifyChecklist: z.array(verifyItemSchema).optional(),
+    /** Provenance of an automated ingest (e.g. Gemini research export). */
+    ingest: z
+      .object({
+        source: z.string(),
+        importedAt: isoDate,
+        notes: z.string().optional(),
+      })
+      .optional(),
     seo: seoSchema,
   })
   .strict();
@@ -121,6 +148,7 @@ export type Group = z.infer<typeof groupSchema>;
 export type Step = z.infer<typeof stepSchema>;
 export type ApprenticePay = z.infer<typeof apprenticePaySchema>;
 export type Allowance = z.infer<typeof allowanceSchema>;
+export type VerifyItem = z.infer<typeof verifyItemSchema>;
 
 /** Phrases that must never appear — INFORMATION, NOT ADVICE guardrail. */
 export const PROHIBITED_ADVICE_PATTERNS: RegExp[] = [
