@@ -60,8 +60,23 @@ docs/                  # Datenmodell, Sourcing, SEO, Recht, Provenienz
 
 Details: siehe `docs/`.
 
-## Status
+## Funktionsumfang
 
-Siehe `docs/seed-provenance.md` für den Verifikationsstand jedes Datensatzes.
-Aktueller Seed: Rahmendaten verifiziert; **Gehaltsbeträge werden noch aus den
-offiziellen Gehaltsordnungen übertragen** und sind bis dahin `needs-review`/`noindex`.
+- **Seiten:** Start, KV-Verzeichnis (Facetten + Fuse-Suche), kanonische KV-Seite,
+  Branchen-Landings, Vergleichsseiten (nur vergleichbare Paare), 4 Rechner,
+  Ratgeber-Hub (6 Beiträge), Legal/Trust-Seiten.
+- **Rechner (lokal, ohne Datenspeicherung):** KV-Mindest-Check, KV-Erhöhungs-Rechner,
+  Vorrückungs-Rechner, Einstufungs-Assistent.
+- **SEO:** Quality-Gate (Sitemap + `meta robots`), JSON-LD (Dataset, BreadcrumbList,
+  ItemList, Article), dynamische OG-Bilder, ISR.
+- **QA:** Zod-Validierung (Build-Fail), 22 Unit-Tests, Build-/Freshness-/Dead-Link-
+  Reports, Lighthouse-CI-Budgets.
+
+## Status der Daten
+
+Siehe `docs/seed-provenance.md` für den Verifikationsstand jedes der 13 Seed-KVs.
+**Rahmendaten verifiziert** (Geltungszeiträume, Abschluss-Prozente, Parteien,
+öffentliche Lehrlingseinkommen); die **Gehaltsbeträge je Gruppe/Stufe** stehen auf
+dem Sentinel `0` („wird geprüft") und sind `needs-review`/`noindex`, bis sie aus den
+offiziellen Gehaltsordnungen übertragen werden. Hintergrund: WKO/GPA/kollektivvertrag.at
+blocken automatisierte Zugriffe (403) — wir umgehen das nicht (siehe `docs/DATA-SOURCING.md`).

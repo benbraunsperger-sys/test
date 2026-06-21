@@ -1,34 +1,33 @@
 import type { Metadata } from "next";
-import { Prose } from "@/components/Prose";
+import Link from "next/link";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { RATGEBER } from "@/content/ratgeber";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Ratgeber",
   description: "Kompakt erklärt: Kollektivvertrag, Einstufung, Verwendungsgruppen, Vorrückung, KV- vs. IST-Gehalt, Lehrlingseinkommen.",
+  alternates: { canonical: absoluteUrl("/ratgeber") },
 };
 
-// Phase 4 fills this small hub (max ~8 articles). Listed here so navigation resolves.
-const PLANNED = [
-  "Was ist ein Kollektivvertrag?",
-  "Einstufung erklärt",
-  "Verwendungsgruppen verstehen",
-  "Vorrückung",
-  "KV-Mindestgehalt vs. IST-Gehalt",
-  "Lehrlingseinkommen",
-];
-
-export default function RatgeberPage() {
+export default function RatgeberIndex() {
   return (
-    <Prose
-      title="Ratgeber"
-      intro="Ein kleiner, sorgfältig gepflegter Hub mit den wichtigsten Grundlagen rund um Kollektivverträge."
-      crumbs={[{ name: "Start", href: "/" }, { name: "Ratgeber", href: "/ratgeber" }]}
-    >
-      <p>Die folgenden Beiträge folgen in Phase 4:</p>
-      <ul>
-        {PLANNED.map((p) => (
-          <li key={p}>{p}</li>
+    <div className="space-y-6">
+      <Breadcrumbs items={[{ name: "Start", href: "/" }, { name: "Ratgeber", href: "/ratgeber" }]} />
+      <header className="space-y-2">
+        <h1 className="text-3xl font-bold tracking-tight">Ratgeber</h1>
+        <p className="text-ink-soft">Die wichtigsten Grundlagen rund um Kollektivverträge — kompakt und in eigenen Worten.</p>
+      </header>
+      <ul className="grid gap-3 sm:grid-cols-2">
+        {RATGEBER.map((a) => (
+          <li key={a.slug}>
+            <Link href={`/ratgeber/${a.slug}`} className="block h-full rounded-lg border border-surface-border bg-surface p-4 hover:border-brand-500">
+              <h2 className="font-semibold text-ink">{a.title}</h2>
+              <p className="mt-1 text-sm text-ink-muted">{a.description}</p>
+            </Link>
+          </li>
         ))}
       </ul>
-    </Prose>
+    </div>
   );
 }

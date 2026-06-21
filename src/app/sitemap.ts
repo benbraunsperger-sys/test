@@ -3,6 +3,7 @@ import { getIndexableKvs, getSectors, getComparablePairs } from "@/lib/data";
 import { getIndexability } from "@/lib/indexability";
 import { sectorSlug } from "@/lib/vocab";
 import { comparisonSlug } from "@/lib/slug";
+import { RATGEBER } from "@/content/ratgeber";
 import { absoluteUrl } from "@/lib/site";
 
 /**
@@ -63,5 +64,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     }));
 
-  return [...staticPages, ...kvPages, ...sectorPages, ...comparePages];
+  const ratgeberPages: MetadataRoute.Sitemap = RATGEBER.map((a) => ({
+    url: absoluteUrl(`/ratgeber/${a.slug}`),
+    lastModified: new Date(a.updated),
+    changeFrequency: "yearly" as const,
+    priority: 0.4,
+  }));
+
+  return [...staticPages, ...kvPages, ...sectorPages, ...comparePages, ...ratgeberPages];
 }

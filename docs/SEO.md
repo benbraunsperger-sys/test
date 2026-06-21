@@ -26,12 +26,12 @@ Fällt eine Bedingung, bekommt die Seite `noindex` und fliegt aus der Sitemap.
 | `/` | Startseite | self |
 | `/kollektivvertraege` | Verzeichnis (Phase 2: Facetten) | self |
 | `/kv/[slug]` | **Kanonische KV-Seite** | self; index nur via Gate |
-| `/kv/[slug]/gehaltstabelle/[jahr]` | Jahrestabelle (Phase 2+) | nur solide Jahre indexieren |
-| `/kv/[slug]/verwendungsgruppe/[code]` | Gruppendetail (Phase 2+) | canonical → KV-Seite |
+| `/kv/[slug]/gehaltstabelle/[jahr]` | Jahrestabelle (geplant) | nur solide Jahre indexieren |
+| `/kv/[slug]/verwendungsgruppe/[code]` | Gruppendetail (geplant) | canonical → KV-Seite |
 | `/branchen` / `/branchen/[branche]` | Branchen-Landing | index nur bei ≥3 KVs |
-| `/vergleich/[a]-vs-[b]` | Vergleich (Phase 3) | order-unabhängiger Canonical |
-| `/tools/*` | Rechner | self |
-| `/ratgeber` / `/ratgeber/[slug]` | Hub (≤8, Phase 4) | self |
+| `/vergleich/[a]-vs-[b]` | Vergleich (✓) | order-unabhängiger Canonical; index nur wenn beide KVs indexierbar |
+| `/tools/*` | Rechner (✓) | self |
+| `/ratgeber` / `/ratgeber/[slug]` | Hub (✓, 6 Beiträge) | self |
 | `/impressum`, `/datenschutz` | rechtlich | `noindex` |
 | `/methodik`, `/quellen`, `/ueber-uns`, `/korrektur-melden` | Trust | index |
 
