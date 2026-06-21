@@ -1,0 +1,62 @@
+id: kv-gueterbefoerderung-arbeiter
+slug: gueterbefoerderungsgewerbe-arbeiter
+name: Kollektivvertrag für das Güterbeförderungsgewerbe (Arbeiter)
+shortName: Güterbeförderung
+sector: Spedition und Logistik
+employeeType: Arbeiter
+country: AT
+region: Österreich
+parties:
+  employer:
+    - Fachverband für das Güterbeförderungsgewerbe (WKO)
+  unions:
+    - vida
+validityPeriods:
+  - id: vp-2026
+    validFrom: "2026-01-01"
+    status: gültig
+    sourceUrl: https://www.wko.at/kollektivvertrag/kollektivvertrag-gueterbefoerderungsgewerbe-2026
+    notes: >-
+      KV-Mindestgehälter +60,00 EUR/Monat ab 1.1.2026 (auf vollen Euro
+      gerundet); Branchen-Mindest von 1.905,00 auf 2.010,00 EUR. Rollierende
+      Inflation 3,0 %, Schnitt rund +3,05 %.
+groups:
+  - code: "LKW"
+    name: Berufskraftfahrer
+    criteriaSummary: >-
+      Lenken von Kraftfahrzeugen im Güterverkehr inkl. Be- und Entladetätigkeit.
+      (Eigene Zusammenfassung.)
+    steps:
+      - stepLabel: Grundstufe
+        validFrom: "2026-01-01"
+        minSalaryEUR: 0
+        basis: Monat
+  - code: "LAGER"
+    name: Lagerarbeiter
+    criteriaSummary: >-
+      Warenannahme, Kommissionierung und Lagertätigkeit. (Eigene
+      Zusammenfassung.)
+    steps:
+      - stepLabel: Grundstufe
+        validFrom: "2026-01-01"
+        minSalaryEUR: 0
+        basis: Monat
+classificationNotes: >-
+  Im Güterbeförderungsgewerbe werden Tätigkeiten Lohn-/Beschäftigungsgruppen
+  zugeordnet (u. a. Berufskraftfahrer, Lager). Maßgeblich ist die offizielle
+  Lohnordnung.
+sourceUrls:
+  - https://www.wko.at/kollektivvertrag/kollektivvertrag-gueterbefoerderungsgewerbe-2026
+  - https://www.gpa.at/kollektivvertrag/transport-und-verkehr/gueterbefoerderung/kv-abschluss-2026-fuer-die-gueterbefoerderung
+lastChecked: "2026-06-21"
+confidence: needs-review
+manualReview: false
+active: true
+relatedKvIds:
+  - kv-spedition-logistik-angestellte
+seo:
+  title: KV Güterbeförderung 2026 – Lohntabelle Arbeiter
+  metaDescription: >-
+    Mindestlöhne, Gruppen und Einstufung im Kollektivvertrag für das
+    Güterbeförderungsgewerbe (Arbeiter) 2026. Mit offizieller Quelle und Stand.
+  h1: Kollektivvertrag für das Güterbeförderungsgewerbe (Arbeiter)

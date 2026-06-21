@@ -1,0 +1,67 @@
+id: kv-hotel-gastgewerbe
+slug: hotel-gastgewerbe
+name: Kollektivvertrag für Arbeiter und Angestellte im Hotel- und Gastgewerbe
+shortName: Hotel- und Gastgewerbe
+sector: Hotel- und Gastgewerbe
+employeeType: Beide
+country: AT
+region: Österreich
+parties:
+  employer:
+    - Bundessparte Tourismus und Freizeitwirtschaft (WKO)
+  unions:
+    - vida
+validityPeriods:
+  - id: vp-2025
+    validFrom: "2025-05-01"
+    status: gültig
+    sourceUrl: https://www.wko.at/tourismus-freizeitwirtschaft/serviceplattform-gastronomie-hotellerie/kollektivvertrag
+    notes: >-
+      Aktuell gültige Lohn-/Gehaltsordnung aus dem Abschluss 2024/2025 (neuer KV
+      ab 1.11.2024 bzw. 1.5.2025).
+  - id: vp-2026-offen
+    validFrom: "2026-06-01"
+    status: angekündigt
+    sourceUrl: https://www.wko.at/oe/oesterreich/kv-verhandlungen-im-hotel-und-gastgewerbe-ohne-ergebnis
+    notes: >-
+      Stand Juni 2026: Die KV-Verhandlungen 2026 wurden nach mehreren Runden
+      ohne Einigung unterbrochen (AG-Angebot zuletzt rund 3 %, Forderung vida
+      mind. 3,6 %). Noch kein gültiger Abschluss 2026.
+groups:
+  - code: "5"
+    name: Lohngruppe 5
+    criteriaSummary: >-
+      Angelernte Tätigkeiten im Service oder in der Küche nach Einschulung.
+      (Eigene Zusammenfassung.)
+    steps:
+      - stepLabel: Grundstufe
+        validFrom: "2025-05-01"
+        minSalaryEUR: 0
+        basis: Monat
+  - code: "3"
+    name: Lohngruppe 3
+    criteriaSummary: >-
+      Qualifizierte Fachkräfte mit abgeschlossener einschlägiger Ausbildung.
+      (Eigene Zusammenfassung.)
+    steps:
+      - stepLabel: Grundstufe
+        validFrom: "2025-05-01"
+        minSalaryEUR: 0
+        basis: Monat
+classificationNotes: >-
+  Der KV gilt für Arbeiter und Angestellte (inkl. Lehrlinge) in Hotellerie und
+  Gastronomie. Die Einstufung erfolgt nach Lohn-/Beschäftigungsgruppen je nach
+  Tätigkeit. Maßgeblich ist die offizielle Lohn-/Gehaltsordnung.
+sourceUrls:
+  - https://www.wko.at/tourismus-freizeitwirtschaft/serviceplattform-gastronomie-hotellerie/kollektivvertrag
+  - https://www.gpa.at/kollektivvertrag/tourismus-und-freizeit/gastgewerbe
+lastChecked: "2026-06-21"
+confidence: needs-review
+manualReview: false
+active: true
+seo:
+  title: KV Hotel- und Gastgewerbe 2026 – Lohn- & Gehaltsordnung
+  metaDescription: >-
+    Lohn- und Gehaltsgruppen, Einstufung und aktueller Verhandlungsstand im
+    Kollektivvertrag für das Hotel- und Gastgewerbe. Mit Quelle und Stand.
+  h1: Kollektivvertrag für das Hotel- und Gastgewerbe

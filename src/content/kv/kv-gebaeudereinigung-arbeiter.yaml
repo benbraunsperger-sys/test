@@ -1,0 +1,61 @@
+id: kv-gebaeudereinigung-arbeiter
+slug: denkmal-fassaden-gebaeudereinigung-arbeiter
+name: Kollektivvertrag für Arbeiter in der Denkmal-, Fassaden- und Gebäudereinigung
+shortName: Gebäudereinigung
+sector: Gebäudereinigung
+employeeType: Arbeiter
+country: AT
+region: Österreich
+parties:
+  employer:
+    - Bundesinnung der Chemischen Gewerbe und der Denkmal-, Fassaden- und Gebäudereiniger (WKO)
+  unions:
+    - vida
+validityPeriods:
+  - id: vp-2026
+    validFrom: "2026-01-01"
+    validTo: "2026-12-31"
+    status: gültig
+    increaseKVPercent: 3.25
+    sourceUrl: https://www.wko.at/kollektivvertrag/lohnordnung-denkmal-fassaden-gebaeudereinigung-2026
+    notes: >-
+      Löhne im Schnitt +3,25 %; Facharbeiter mit Lehrabschluss Reinigungstechnik
+      +4,5 %; Lehrlinge +6 %. Basis rollierende Inflation 3 %.
+groups:
+  - code: "6"
+    name: Lohngruppe 6
+    criteriaSummary: >-
+      Unterhaltsreinigung und einfache Reinigungstätigkeiten. (Eigene
+      Zusammenfassung.)
+    steps:
+      - stepLabel: Grundstufe
+        validFrom: "2026-01-01"
+        minSalaryEUR: 0
+        basis: Stunde
+  - code: "3"
+    name: Lohngruppe 3
+    criteriaSummary: >-
+      Facharbeit mit Lehrabschluss Reinigungstechnik, Spezialreinigung. (Eigene
+      Zusammenfassung.)
+    steps:
+      - stepLabel: Grundstufe
+        validFrom: "2026-01-01"
+        minSalaryEUR: 0
+        basis: Stunde
+classificationNotes: >-
+  Reinigungskräfte werden Lohngruppen nach Tätigkeit und Qualifikation
+  zugeordnet; die Löhne sind Stundenlöhne. Maßgeblich ist die offizielle
+  Lohnordnung.
+sourceUrls:
+  - https://www.wko.at/kollektivvertrag/lohnordnung-denkmal-fassaden-gebaeudereinigung-2026
+  - https://www.wko.at/kollektivvertrag/kollektivvertrag-denkmal-fassaden-gebaeudereinigung-2026
+lastChecked: "2026-06-21"
+confidence: needs-review
+manualReview: false
+active: true
+seo:
+  title: KV Gebäudereinigung 2026 – Lohntabelle & Lohngruppen
+  metaDescription: >-
+    Mindestlöhne, Lohngruppen und Einstufung im Kollektivvertrag für die Denkmal-,
+    Fassaden- und Gebäudereinigung 2026. Mit offizieller Quelle und Stand.
+  h1: Kollektivvertrag für die Denkmal-, Fassaden- und Gebäudereinigung

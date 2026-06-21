@@ -1,0 +1,68 @@
+id: kv-sozialwirtschaft-swoe
+slug: sozialwirtschaft-swoe
+name: Kollektivvertrag der Sozialwirtschaft Österreich (SWÖ-KV)
+shortName: Sozialwirtschaft (SWÖ)
+sector: Sozialwirtschaft
+employeeType: Beide
+country: AT
+region: Österreich
+parties:
+  employer:
+    - Sozialwirtschaft Österreich (SWÖ)
+  unions:
+    - GPA
+    - vida
+validityPeriods:
+  - id: vp-2026
+    validFrom: "2026-04-01"
+    status: gültig
+    increaseKVPercent: 2.6
+    increaseISTPercent: 2.4
+    sourceUrl: https://www.gpa.at/kollektivvertrag/gesundheit-und-soziales/sozialwirtschaft-oesterreich
+    notes: >-
+      KV-Gehälter/Löhne +2,6 %, IST +2,4 %; Zulagen und Lehrlingseinkommen
+      +2,6 %. Gehaltstabelle gültig ab 1.4.2026. Zweijahresabschluss.
+  - id: vp-2027
+    validFrom: "2027-01-01"
+    status: angekündigt
+    increaseKVPercent: 2.3
+    sourceUrl: https://www.swoe.at/1001,4618,0,2.html
+    notes: Ab 1.1.2027 mindestens +2,3 % (abhängig von der Inflation).
+groups:
+  - code: "4"
+    name: Verwendungsgruppe 4
+    criteriaSummary: >-
+      Betreuungs- und Pflegehilfstätigkeiten nach Anleitung. (Eigene
+      Zusammenfassung.)
+    steps:
+      - stepLabel: Stufe 1
+        validFrom: "2026-04-01"
+        minSalaryEUR: 0
+        basis: Monat
+  - code: "7"
+    name: Verwendungsgruppe 7
+    criteriaSummary: >-
+      Qualifizierte Sozialbetreuung/Pflege mit einschlägiger Ausbildung.
+      (Eigene Zusammenfassung.)
+    steps:
+      - stepLabel: Stufe 1
+        validFrom: "2026-04-01"
+        minSalaryEUR: 0
+        basis: Monat
+classificationNotes: >-
+  Der SWÖ-KV ordnet Tätigkeiten Verwendungsgruppen mit mehreren Stufen zu; die
+  Vorrückung erfolgt nach anrechenbaren Dienstzeiten. Maßgeblich ist die
+  offizielle Gehaltstabelle der Sozialwirtschaft Österreich.
+sourceUrls:
+  - https://www.gpa.at/kollektivvertrag/gesundheit-und-soziales/sozialwirtschaft-oesterreich
+  - https://www.swoe.at/1142,,,2.html
+lastChecked: "2026-06-21"
+confidence: needs-review
+manualReview: false
+active: true
+seo:
+  title: SWÖ-KV 2026 – Gehaltstabelle Sozialwirtschaft & Einstufung
+  metaDescription: >-
+    Mindestgehälter, Verwendungsgruppen und Einstufung im Kollektivvertrag der
+    Sozialwirtschaft Österreich (SWÖ) 2026. Mit offizieller Quelle und Stand.
+  h1: Kollektivvertrag der Sozialwirtschaft Österreich (SWÖ-KV)

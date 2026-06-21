@@ -1,0 +1,77 @@
+id: kv-metallgewerbe-arbeiter
+slug: metallgewerbe-arbeiter
+name: Kollektivvertrag für Arbeiter im Metallgewerbe
+shortName: Metallgewerbe Arbeiter
+sector: Metallgewerbe
+employeeType: Arbeiter
+country: AT
+region: Österreich
+parties:
+  employer:
+    - Bundesinnung der Metalltechnik (WKO)
+  unions:
+    - PRO-GE (Produktionsgewerkschaft)
+validityPeriods:
+  - id: vp-2026
+    validFrom: "2026-01-01"
+    validTo: "2026-12-31"
+    status: gültig
+    increaseKVPercent: 2.2
+    increaseISTPercent: 1.8
+    capEUR: 85
+    sourceUrl: https://www.wko.at/kollektivvertrag/lohnordnung-metallgewerbe-arbeiter-2026
+    notes: >-
+      KV-Mindestlöhne (Lohngruppen 1–7 und Technikergruppen) +2,2 %; IST-Löhne
+      +1,8 %, gedeckelt mit 85,00 EUR. Zweijahresabschluss 2026/2027.
+  - id: vp-2027
+    validFrom: "2027-01-01"
+    status: angekündigt
+    sourceUrl: https://www.wko.at/kollektivvertrag/lohnordnung-metallgewerbe-arbeiter-2026
+    notes: Zweite Stufe 2027. Werte im offiziellen KV prüfen.
+groups:
+  - code: "1"
+    name: Lohngruppe 1
+    criteriaSummary: >-
+      Einfache Tätigkeiten ohne besondere Vorkenntnisse nach Anweisung.
+      (Eigene Zusammenfassung der Tätigkeitsmerkmale.)
+    steps:
+      - stepLabel: Grundstufe
+        validFrom: "2026-01-01"
+        minSalaryEUR: 0
+        basis: Stunde
+  - code: "4"
+    name: Lohngruppe 4
+    criteriaSummary: >-
+      Qualifizierte Facharbeit mit abgeschlossener einschlägiger Lehre,
+      selbstständige Ausführung. (Eigene Zusammenfassung.)
+    steps:
+      - stepLabel: Grundstufe
+        validFrom: "2026-01-01"
+        minSalaryEUR: 0
+        basis: Stunde
+apprenticePay:
+  - year: 1
+    validFrom: "2026-01-01"
+    amountEUR: 1000
+  - year: 4
+    validFrom: "2026-01-01"
+    amountEUR: 2000
+classificationNotes: >-
+  Arbeiter werden Lohngruppen nach der tatsächlich ausgeübten Tätigkeit
+  zugeordnet. Die Mindestlöhne sind überwiegend Stundenlöhne. Maßgeblich ist die
+  offizielle Lohnordnung.
+sourceUrls:
+  - https://www.wko.at/kollektivvertrag/lohnordnung-metallgewerbe-arbeiter-2026
+  - https://www.proge.at/kollektivvertrag/verhandlungen-und-abschluesse/2026/kv-abschluss-metallgewerbe-2026
+lastChecked: "2026-06-21"
+confidence: needs-review
+manualReview: false
+active: true
+relatedKvIds:
+  - kv-metallgewerbe-angestellte
+seo:
+  title: KV Metallgewerbe Arbeiter 2026 – Lohntabelle & Lohngruppen
+  metaDescription: >-
+    Mindestlöhne, Lohngruppen und Einstufung im Kollektivvertrag für Arbeiter im
+    Metallgewerbe 2026. Mit offizieller Quelle und Stand-Datum.
+  h1: Kollektivvertrag für Arbeiter im Metallgewerbe

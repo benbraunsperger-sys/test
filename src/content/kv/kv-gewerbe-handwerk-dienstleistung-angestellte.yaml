@@ -1,0 +1,62 @@
+id: kv-gewerbe-handwerk-dienstleistung-angestellte
+slug: gewerbe-handwerk-dienstleistung-angestellte
+name: Kollektivvertrag für Angestellte im Gewerbe, Handwerk und in der Dienstleistung
+shortName: Gewerbe, Handwerk & Dienstleistung
+sector: Gewerbe, Handwerk und Dienstleistung
+employeeType: Angestellte
+country: AT
+region: Österreich
+parties:
+  employer:
+    - Bundessparte Gewerbe und Handwerk (WKO)
+  unions:
+    - GPA (Gewerkschaft der Privatangestellten)
+validityPeriods:
+  - id: vp-2026
+    validFrom: "2026-01-01"
+    validTo: "2026-12-31"
+    status: gültig
+    increaseKVPercent: 2.7
+    sourceUrl: https://www.wko.at/kollektivvertrag/gehaltsordnung-gewerbe-handwerk-dienstleistung-2026
+    notes: >-
+      Mindestgrundgehälter in allen Beschäftigungsgruppen +2,7 %,
+      Lehrlingseinkommen +3,0 %. Beschäftigungsgruppe 1 entfällt. Diäten 30 EUR,
+      Kilometergeld 0,50 EUR.
+groups:
+  - code: "2"
+    name: Beschäftigungsgruppe 2
+    criteriaSummary: >-
+      Einfachere kaufmännische oder technische Tätigkeiten nach Einschulung.
+      (Eigene Zusammenfassung.)
+    steps:
+      - stepLabel: 1. u. 2. Berufsjahr
+        validFrom: "2026-01-01"
+        minSalaryEUR: 0
+        basis: Monat
+  - code: "4"
+    name: Beschäftigungsgruppe 4
+    criteriaSummary: >-
+      Selbstständige qualifizierte Sachbearbeitung mit einschlägiger Ausbildung.
+      (Eigene Zusammenfassung.)
+    steps:
+      - stepLabel: 1. u. 2. Berufsjahr
+        validFrom: "2026-01-01"
+        minSalaryEUR: 0
+        basis: Monat
+classificationNotes: >-
+  Dieser Rahmen-KV gilt für zahlreiche Gewerbe- und Dienstleistungsbranchen. Die
+  Einstufung erfolgt nach der tatsächlichen Tätigkeit in Beschäftigungsgruppen;
+  innerhalb der Gruppe steigt das Mindestgehalt mit den Berufsjahren.
+sourceUrls:
+  - https://www.wko.at/kollektivvertrag/gehaltsordnung-gewerbe-handwerk-dienstleistung-2026
+  - https://www.wko.at/kollektivvertrag/kv-abschluss-gewerbe-handwer-dienstleistungen-2026
+lastChecked: "2026-06-21"
+confidence: needs-review
+manualReview: false
+active: true
+seo:
+  title: KV Gewerbe, Handwerk & Dienstleistung 2026 – Angestellte
+  metaDescription: >-
+    Mindestgehälter, Beschäftigungsgruppen und Einstufung im Rahmen-KV für
+    Angestellte in Gewerbe, Handwerk und Dienstleistung 2026. Mit Quelle.
+  h1: Kollektivvertrag für Angestellte im Gewerbe, Handwerk und in der Dienstleistung

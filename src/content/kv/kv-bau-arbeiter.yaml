@@ -1,0 +1,63 @@
+id: kv-bau-arbeiter
+slug: baugewerbe-bauindustrie-arbeiter
+name: Kollektivvertrag für Arbeiter im Baugewerbe und in der Bauindustrie
+shortName: Bau Arbeiter
+sector: Bauindustrie und Baugewerbe
+employeeType: Arbeiter
+country: AT
+region: Österreich
+parties:
+  employer:
+    - Bundesinnung Bau / Fachverband der Bauindustrie (WKO)
+  unions:
+    - Gewerkschaft Bau-Holz (GBH)
+validityPeriods:
+  - id: vp-2026
+    validFrom: "2026-05-01"
+    validTo: "2027-04-30"
+    status: gültig
+    sourceUrl: https://www.wko.at/kollektivvertrag/lohnordnung-baugewerbe-bauindustrie-arbeiter-2026
+    notes: >-
+      Lohnrunde ab 1.5.2026 gestaffelt: +3,6 % (A2, Lehrlinge, Aushilfen),
+      +3,2 % (A3, M1/P1), +3,0 % (A4, A5, M2/P2, OM/HP). Schicht- und
+      Erschwerniszulagen separat erhöht.
+groups:
+  - code: "A3"
+    name: Beschäftigungsgruppe A3
+    criteriaSummary: >-
+      Bauhandwerkliche Tätigkeiten mit einschlägiger Qualifikation. (Eigene
+      Zusammenfassung.)
+    steps:
+      - stepLabel: Grundstufe
+        validFrom: "2026-05-01"
+        minSalaryEUR: 0
+        basis: Stunde
+  - code: "A4"
+    name: Beschäftigungsgruppe A4
+    criteriaSummary: >-
+      Facharbeit mit abgeschlossener Lehre, selbstständige Ausführung. (Eigene
+      Zusammenfassung.)
+    steps:
+      - stepLabel: Grundstufe
+        validFrom: "2026-05-01"
+        minSalaryEUR: 0
+        basis: Stunde
+classificationNotes: >-
+  Bauarbeiter werden Beschäftigungsgruppen (A2–A5, Maschinisten, Poliere) nach
+  Tätigkeit und Qualifikation zugeordnet. Die Löhne sind Stundenlöhne. Der KV
+  läuft jeweils von 1. Mai bis 30. April. Maßgeblich ist die offizielle Lohntafel.
+sourceUrls:
+  - https://www.wko.at/kollektivvertrag/lohnordnung-baugewerbe-bauindustrie-arbeiter-2026
+  - https://www.gpa.at/kollektivvertrag/bauen-wohnen-und-bauwirtschaft/baugewerbe
+lastChecked: "2026-06-21"
+confidence: needs-review
+manualReview: false
+active: true
+relatedKvIds:
+  - kv-bau-angestellte
+seo:
+  title: KV Bau Arbeiter 2026 – Lohntafel Baugewerbe & Bauindustrie
+  metaDescription: >-
+    Mindestlöhne, Beschäftigungsgruppen und Einstufung im Kollektivvertrag für
+    Bauarbeiter (Baugewerbe und Bauindustrie) 2026. Mit Quelle und Stand.
+  h1: Kollektivvertrag für Arbeiter im Baugewerbe und in der Bauindustrie

@@ -1,0 +1,70 @@
+id: kv-metallindustrie-angestellte
+slug: metallindustrie-angestellte
+name: Kollektivvertrag für Angestellte der Metallindustrie
+shortName: Metallindustrie Angestellte
+sector: Metallindustrie
+employeeType: Angestellte
+country: AT
+region: Österreich
+parties:
+  employer:
+    - Fachverbände der Metalltechnischen Industrie (WKO)
+  unions:
+    - GPA
+validityPeriods:
+  - id: vp-2026
+    validFrom: "2026-01-01"
+    status: gültig
+    increaseKVPercent: 2.2
+    increaseISTPercent: 1.8
+    capEUR: 95
+    sourceUrl: https://www.gpa.at/kollektivvertrag/industrie/metallindustrie/2026/kv-abschluss-in-der-metallindustrie
+    notes: >-
+      KV-Mindestgehälter +2,2 % (VG I–IV und Meister), Deckelung 95,00 EUR in
+      VG V, VI und für höhere Meister; IST +1,8 %. Zweijahresabschluss.
+  - id: vp-2026-stufe2
+    validFrom: "2026-11-01"
+    status: angekündigt
+    increaseKVPercent: 2.1
+    increaseISTPercent: 1.9
+    sourceUrl: https://www.gpa.at/kollektivvertrag/industrie/metallindustrie/2026/kv-abschluss-in-der-metallindustrie
+    notes: Zweite Stufe ab 1.11.2026.
+groups:
+  - code: "III"
+    name: Verwendungsgruppe III
+    criteriaSummary: >-
+      Selbstständige Tätigkeiten mit fachlicher Ausbildung nach allgemeinen
+      Anweisungen. (Eigene Zusammenfassung.)
+    steps:
+      - stepLabel: Im 1.–2. Verwendungsgruppenjahr
+        validFrom: "2026-01-01"
+        minSalaryEUR: 0
+        basis: Monat
+  - code: "IV"
+    name: Verwendungsgruppe IV
+    criteriaSummary: >-
+      Anspruchsvolle, eigenverantwortliche Fachtätigkeit mit Erfahrung. (Eigene
+      Zusammenfassung.)
+    steps:
+      - stepLabel: Im 1.–2. Verwendungsgruppenjahr
+        validFrom: "2026-01-01"
+        minSalaryEUR: 0
+        basis: Monat
+classificationNotes: >-
+  Der Rahmen-KV der Metallindustrie ordnet Tätigkeiten Verwendungsgruppen zu;
+  innerhalb der Gruppe steigt das Mindestgehalt mit den Verwendungsgruppenjahren.
+  Maßgeblich ist die offizielle Gehaltsordnung.
+sourceUrls:
+  - https://www.gpa.at/kollektivvertrag/industrie/metallindustrie/2026/kv-abschluss-in-der-metallindustrie
+lastChecked: "2026-06-21"
+confidence: needs-review
+manualReview: false
+active: true
+relatedKvIds:
+  - kv-metallgewerbe-angestellte
+seo:
+  title: KV Metallindustrie Angestellte 2026 – Gehalt & Verwendungsgruppen
+  metaDescription: >-
+    Mindestgehälter, Verwendungsgruppen und Einstufung im Kollektivvertrag für
+    Angestellte der Metallindustrie 2026. Mit offizieller Quelle und Stand.
+  h1: Kollektivvertrag für Angestellte der Metallindustrie

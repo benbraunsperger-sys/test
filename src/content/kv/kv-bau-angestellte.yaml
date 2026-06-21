@@ -1,0 +1,60 @@
+id: kv-bau-angestellte
+slug: baugewerbe-bauindustrie-angestellte
+name: Kollektivvertrag für Angestellte im Baugewerbe und in der Bauindustrie
+shortName: Bau Angestellte
+sector: Bauindustrie und Baugewerbe
+employeeType: Angestellte
+country: AT
+region: Österreich
+parties:
+  employer:
+    - Bundesinnung Bau / Fachverband der Bauindustrie (WKO)
+  unions:
+    - GPA
+validityPeriods:
+  - id: vp-2026
+    validFrom: "2026-05-01"
+    validTo: "2027-04-30"
+    status: gültig
+    sourceUrl: https://www.wko.at/kollektivvertrag/gehaltsordnung-baugewerbe-bauindustrie-angestellte-2026
+    notes: Gehaltsordnung gültig ab 1.5.2026. Werte im offiziellen KV prüfen.
+groups:
+  - code: "III"
+    name: Verwendungsgruppe III
+    criteriaSummary: >-
+      Selbstständige technische oder kaufmännische Sachbearbeitung. (Eigene
+      Zusammenfassung.)
+    steps:
+      - stepLabel: 1.–2. Verwendungsgruppenjahr
+        validFrom: "2026-05-01"
+        minSalaryEUR: 0
+        basis: Monat
+  - code: "IV"
+    name: Verwendungsgruppe IV
+    criteriaSummary: >-
+      Anspruchsvolle, eigenverantwortliche Fachtätigkeit mit Erfahrung. (Eigene
+      Zusammenfassung.)
+    steps:
+      - stepLabel: 1.–2. Verwendungsgruppenjahr
+        validFrom: "2026-05-01"
+        minSalaryEUR: 0
+        basis: Monat
+classificationNotes: >-
+  Bau-Angestellte werden Verwendungsgruppen nach Tätigkeit zugeordnet; die
+  Vorrückung erfolgt nach Verwendungsgruppenjahren. Der KV läuft von 1. Mai bis
+  30. April. Maßgeblich ist die offizielle Gehaltsordnung.
+sourceUrls:
+  - https://www.wko.at/kollektivvertrag/gehaltsordnung-baugewerbe-bauindustrie-angestellte-2026
+  - https://www.wko.at/kollektivvertrag/kollektivvertragsabschluss-angestellte-bau-2026
+lastChecked: "2026-06-21"
+confidence: needs-review
+manualReview: false
+active: true
+relatedKvIds:
+  - kv-bau-arbeiter
+seo:
+  title: KV Bau Angestellte 2026 – Gehaltsordnung & Verwendungsgruppen
+  metaDescription: >-
+    Mindestgehälter, Verwendungsgruppen und Einstufung im Kollektivvertrag für
+    Angestellte im Baugewerbe und in der Bauindustrie 2026. Mit Quelle und Stand.
+  h1: Kollektivvertrag für Angestellte im Baugewerbe und in der Bauindustrie
