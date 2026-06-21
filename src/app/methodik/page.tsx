@@ -51,6 +51,24 @@ export default function MethodikPage() {
         Bezahlschranken geben wir nicht wieder.
       </p>
 
+      <h2>Verifikations-Workflow</h2>
+      <p>
+        Neue Zahlen durchlaufen einen mehrstufigen Prozess: strukturierte Übernahme aus der
+        offiziellen Quelle → automatische Plausibilitätsprüfung (Monotonie der Stufen,
+        Jahresvergleich) → menschliche Stichprobe gegen das Original-PDF → Freischaltung. Erst
+        nach der menschlichen Bestätigung wird eine Seite öffentlich indexiert; davor ist sie nur
+        in einer internen, nicht indexierten Vorschau sichtbar.
+      </p>
+
+      <h2>Vom Beruf zum KV</h2>
+      <p>
+        Unsere Berufsseiten (z. B. „Einzelhandelskaufmann Gehalt“) ordnen einen Beruf dem
+        zuständigen Kollektivvertrag und der wahrscheinlichen Verwendungsgruppe zu. Der angezeigte
+        Betrag wird stets live aus dem geprüften KV-Datensatz gezogen — Berufsseiten speichern
+        keine eigenen Gehaltszahlen. Eine Berufsseite wird nur veröffentlicht, wenn ihr KV geprüft
+        ist; sonst bleibt sie auf <code>noindex</code>.
+      </p>
+
       <h2>Korrekturen</h2>
       <p>
         Fehler? Über <a href="/korrektur-melden">Korrektur melden</a> kannst du einen falschen Wert

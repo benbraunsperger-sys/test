@@ -20,6 +20,7 @@ jobs:
       - run: npm test
       - run: npm run build
       - run: npm run data:report
+      - run: npm run data:sanity
       - run: npm run data:freshness
 
   lighthouse:

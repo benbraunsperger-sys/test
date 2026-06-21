@@ -63,8 +63,24 @@ Details: siehe `docs/`.
 ## Funktionsumfang
 
 - **Seiten:** Start, KV-Verzeichnis (Facetten + Fuse-Suche), kanonische KV-Seite,
-  Branchen-Landings, Vergleichsseiten (nur vergleichbare Paare), 4 Rechner,
-  Ratgeber-Hub (6 Beiträge), Legal/Trust-Seiten.
+  **Verwendungsgruppen-Seiten**, **Berufsseiten** (`/beruf/[slug]` → KV → Gruppe →
+  Live-Mindestgehalt), Branchen-Landings, Vergleichsseiten (nur vergleichbare
+  Paare), 4 Rechner, Ratgeber-Hub, Aktualisierungen + RSS, Legal/Trust-Seiten.
+- **Daten-Pipeline:** `data:ingest` (Gemini-Export → Schema, verbatim),
+  `data:sanity`, `review:queue`, `verify:promote`. Vorschau unter `/vorschau/...`
+  (noindex), bevor `verify:promote` eine Seite öffentlich schaltet.
+
+## Daten-Pipeline (Kurzform)
+
+```bash
+# Gemini-Export nach data/ingest/<kv>.yaml legen, dann:
+npm run data:ingest        # → verified-pending-human (Zahlen verbatim)
+npm run data:sanity        # Plausibilität → docs/DATA-SANITY.md
+npm run review:queue       # Stichproben-Liste → docs/REVIEW-QUEUE.md
+npm run verify:promote -- kv-handel-angestellte   # → öffentlich indexierbar
+```
+
+Siehe `docs/GO-LIVE.md` für die vollständige Minimal-Checkliste.
 - **Rechner (lokal, ohne Datenspeicherung):** KV-Mindest-Check, KV-Erhöhungs-Rechner,
   Vorrückungs-Rechner, Einstufungs-Assistent.
 - **SEO:** Quality-Gate (Sitemap + `meta robots`), JSON-LD (Dataset, BreadcrumbList,

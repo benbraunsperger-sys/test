@@ -28,6 +28,12 @@ brauchen. Im Code sind sie als `TODO`-Marker sichtbar (Komponente `Todo`).
 - Keine Wiedergabe des KV-Volltextes; nur Fakten + eigene Zusammenfassungen.
 - Quellenlink + „zuletzt geprüft" je KV-Seite.
 
+## Berufsseiten / Einstufungs-Hinweise
+- [ ] Stichprobe der Beruf→Verwendungsgruppe-Zuordnungen durch eine fachkundige
+      Person bestätigen lassen (insb. die `needs-review`-Berufe). Falsche
+      Einstufungen bleiben sonst dauerhaft `noindex`, aber eine Sichtprüfung
+      erhöht das Vertrauen.
+
 ## Marke / Assets
 - [ ] Name „KV-Radar" ist Arbeitstitel – Marken-/Domainprüfung vor Launch.
 - [ ] Logo/OG-Bilder ersetzen Platzhalter (Phase 4).

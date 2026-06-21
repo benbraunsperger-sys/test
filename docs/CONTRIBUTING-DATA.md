@@ -3,7 +3,17 @@
 KV-Mindestgehälter ändern sich überwiegend **jährlich** zu gestaffelten Terminen.
 So fügst du einen KV hinzu oder aktualisierst ihn, ohne Leitplanken zu verletzen.
 
-## Neuen KV hinzufügen
+## Schnellweg: Ingest aus Gemini/Recherche-Export
+
+1. Export (YAML, nah am Schema) nach `data/ingest/<kv>.yaml` legen.
+2. `npm run data:ingest` → schreibt `src/content/kv/<id>.yaml` als
+   `verified-pending-human` (Zahlen werden **verbatim** übernommen, nie verändert).
+3. `npm run data:sanity` → `docs/DATA-SANITY.md` auf Auffälligkeiten prüfen.
+4. Vorschau: `/vorschau/kv/<slug>` (noindex).
+5. `npm run review:queue` → `docs/REVIEW-QUEUE.md` abarbeiten.
+6. `npm run verify:promote -- <kv-id>` → öffentlich indexierbar.
+
+## Neuen KV manuell hinzufügen
 
 1. Datei `src/content/kv/<id>.yaml` anlegen (Vorlage: bestehende Datei kopieren).
 2. Rahmendaten aus der offiziellen Quelle eintragen: `name`, `sector`, `employeeType`,
